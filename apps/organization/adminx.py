@@ -16,7 +16,7 @@ class CourseOrgAdmin(object):
     list_display = ['name', 'desc', 'click_nums', 'fav_nums']
     search_fields = ['name', 'desc', 'click_nums', 'fav_nums']
     list_filter = ['name', 'desc', 'click_nums', 'fav_nums']
-    # relfield_style = 'fk-ajax'
+    relfield_style = 'fk-ajax'
     # style_fields = {"desc":"ueditor"}
     model_icon = 'fa fa-university'
 

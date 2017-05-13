@@ -41,7 +41,7 @@ class Course(models.Model):
 
     def go_to(self):
         from django.utils.safestring import mark_safe
-        return mark_safe("<a href='http://www.projectsedu.com'>跳转</>")
+        return mark_safe("<a href='http://www.baidu.com'>跳转</>")
     go_to.short_description = "跳转"
 
     def get_learn_users(self):

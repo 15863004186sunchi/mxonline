@@ -22,8 +22,10 @@ class CourseAdmin(object):
     readonly_fields = ['click_nums']
     list_editable = ['degree', 'desc']
     exclude = ['fav_nums']
-    #inlines = [LessonInline, CourseResourceInline]
-    #style_fields = {"detail":"ueditor"}
+    model_icon = 'fa fa-film'
+    inlines = [LessonInline, CourseResourceInline]
+    #refresh_times = [3,5]
+    style_fields = {"detail":"ueditor"}
     import_excel = True
 
     def queryset(self):
@@ -78,6 +80,7 @@ class CourseResourceAdmin(object):
     list_display = ['course', 'name', 'download', 'add_time']
     search_fields = ['course', 'name', 'download']
     list_filter = ['course', 'name', 'download', 'add_time']
+
 
 
 xadmin.site.register(Course, CourseAdmin)
